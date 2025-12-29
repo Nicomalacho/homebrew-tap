@@ -43,10 +43,10 @@ echo "    Linux SHA256: ${SHA_LINUX}"
 cd - > /dev/null
 
 echo ""
-echo "Updating Formula/gs.rb..."
+echo "Updating Formula/gstack.rb..."
 
 # Update the formula file
-FORMULA_FILE="Formula/gs.rb"
+FORMULA_FILE="Formula/gstack.rb"
 
 # Update version
 sed -i '' "s/version \".*\"/version \"${FORMULA_VERSION}\"/" "$FORMULA_FILE"
@@ -65,5 +65,5 @@ echo ""
 echo "Done! Formula updated for version ${VERSION}"
 echo ""
 echo "Next steps:"
-echo "  1. Review: git diff Formula/gs.rb"
-echo "  2. Commit: git add Formula/gs.rb && git commit -m 'Update to ${VERSION}' && git push"
+echo "  1. Review: git diff Formula/gstack.rb"
+echo "  2. Commit: git add Formula/gstack.rb && git commit -m 'Update to ${VERSION}' && git push"

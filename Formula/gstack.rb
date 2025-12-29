@@ -1,4 +1,4 @@
-class Gs < Formula
+class Gstack < Formula
   desc "CLI tool for managing stacked Git branches with automated rebasing"
   homepage "https://github.com/nicomalacho/stack-branch"
   version "0.1.0"
