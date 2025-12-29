@@ -5,33 +5,21 @@ class Gs < Formula
   license "MIT"
 
   on_macos do
-    on_arm do
-      url "https://github.com/nicomalacho/stack-branch/releases/download/v#{version}/gs-macos-arm64"
-      sha256 "PLACEHOLDER_SHA256_MACOS_ARM64"
+    # ARM64 binary - Intel Macs can run via Rosetta 2
+    url "https://github.com/nicomalacho/stack-branch/releases/download/v#{version}/gs-macos-arm64"
+    sha256 "e7e83e950df1434ed56feb2956e81480793ce0f8e19dbbbfc4fdb6c226ec1376"
 
-      def install
-        bin.install "gs-macos-arm64" => "gs"
-      end
-    end
-
-    on_intel do
-      url "https://github.com/nicomalacho/stack-branch/releases/download/v#{version}/gs-macos-x86_64"
-      sha256 "PLACEHOLDER_SHA256_MACOS_X86_64"
-
-      def install
-        bin.install "gs-macos-x86_64" => "gs"
-      end
+    def install
+      bin.install "gs-macos-arm64" => "gs"
     end
   end
 
   on_linux do
-    on_intel do
-      url "https://github.com/nicomalacho/stack-branch/releases/download/v#{version}/gs-linux-x86_64"
-      sha256 "PLACEHOLDER_SHA256_LINUX_X86_64"
+    url "https://github.com/nicomalacho/stack-branch/releases/download/v#{version}/gs-linux-x86_64"
+    sha256 "e03ffc88e2b9f9d85464d75ce4435fdceff08efca9c9ba695aafdead9a603d38"
 
-      def install
-        bin.install "gs-linux-x86_64" => "gs"
-      end
+    def install
+      bin.install "gs-linux-x86_64" => "gs"
     end
   end
 
